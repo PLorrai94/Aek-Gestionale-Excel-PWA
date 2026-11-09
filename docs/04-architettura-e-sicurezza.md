@@ -46,14 +46,14 @@ Se le persone che devono modificare il foglio sono un piccolo gruppo di collabor
 
 ## Accessi e permessi minimi
 
-| Soggetto | Anagrafica | Calendar | Drive documenti |
+| Soggetto | Sheets operativo | Calendar privato AEK | Drive operativo |
 | --- | --- | --- | --- |
-| Responsabile autorizzato | Modifica | Gestisce eventi se abilitato | Gestisce condivisioni se proprietario/gestore |
-| Allenatore autorizzato | Modifica | Gestisce eventi se abilitato | Accesso ai file assegnati |
-| Collaboratore autorizzato | Modifica | Gestisce eventi se abilitato | Accesso ai file assegnati |
-| Allenatore/collaboratore **non autorizzato** | Nessuna modifica | Solo accessi concessi separatamente | Solo accessi concessi separatamente |
-| Giocatore non autorizzato | **Nessuna modifica**; lettura ancora da definire | Solo eventi resi condivisibili | Solo documenti specificamente condivisi |
-| Persona esterna | Nessun accesso ai dati privati | Solo eventuali eventi resi pubblici | Nessun accesso ai file privati |
+| Persona autorizzata 1, account Google definito | Lettura e modifica | Accesso secondo ruolo Calendar assegnato | Lettura e modifica sui file previsti |
+| Persona autorizzata 2, account Google definito | Lettura e modifica | Accesso secondo ruolo Calendar assegnato | Lettura e modifica sui file previsti |
+| Altri allenatori, collaboratori o giocatori | **Nessun accesso** | **Nessun accesso al calendario privato** | **Nessun accesso** |
+| Pubblico/esterni | **Nessun accesso** | **Nessun accesso al calendario privato** | **Nessun accesso** |
+
+**Eccezione da verificare prima di raccogliere documenti:** i dati di salute, inclusi certificati e relative scadenze, non sono automaticamente accessibili a entrambi gli editor: devono esserci autorizzazioni e condizioni legittime specifiche, oppure file/cartelle riservati a chi può trattarli.
 
 **È una matrice di autorizzazione prevista**, non una configurazione già applicata. I permessi effettivi si impostano nella condivisione di Sheets, Drive e Calendar, ciascuno secondo il proprio modello. Gli editor di uno stesso file Google Sheets possono in generale aprire anche le altre schede del file: eventuali dati riservati a un sottoinsieme dello staff dovranno stare in un **file separato**, non in colonne nascoste.
 
