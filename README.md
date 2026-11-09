@@ -35,6 +35,7 @@ La **data, l'ora e il luogo degli eventi** rimangono in **Google Calendar** (uni
 7. [Modello dati e regole](docs/07-modello-dati.md) — **nuovo, documento di riferimento**
 8. [Operazioni manuali e dall'app](docs/08-procedure-e-sincronizzazione.md) — **nuovo**
 9. [Esempi con dati fittizi](docs/09-esempi-dati.md) — **nuovo**
+10. [Quote e documenti personali su Drive](docs/10-quote-documenti-drive.md) — **proposta da discutere, non ancora approvata**
 
 ## Regole non negoziabili
 
