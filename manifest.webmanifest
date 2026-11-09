@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "AEK Gestionale",
+  "short_name": "AEK",
+  "description": "Gestione semplice della squadra amatoriale",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f6fa",
+  "theme_color": "#0e2040",
+  "lang": "it",
+  "icons": [
+    {
+      "src": "./icons/aek-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
