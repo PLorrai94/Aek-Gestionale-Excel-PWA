@@ -48,7 +48,7 @@ Quando un collaboratore crea a mano un evento in Calendar, può riportarne il li
 
 Il foglio `AEK_Dati_Squadra` non deve essere visibile a tutta la squadra se include recapiti o altri dati personali. Solo **le due persone specificamente autorizzate**, tramite i rispettivi account Google, avranno accesso di lettura e modifica ai dati ordinari. Essere allenatore o collaboratore non implica automaticamente essere editor. Una persona con accesso di scrittura al foglio può anche aprirlo fuori dall'app; nascondere colonne o schermate **non garantisce riservatezza**.
 
-Nella **v1 nessun giocatore può aggiornare dati tramite l’app o il foglio**, salvo che sia anche staff formalmente autorizzato. L’accesso in sola lettura dei giocatori non è ancora deciso; un link in sola lettura al file anagrafico non deve esporre contatti e altri dati privati.
+Nella **v1 i giocatori, gli altri allenatori/collaboratori e gli esterni non possono né leggere né modificare** i dati gestiti nell'app. L'eventuale ruolo sportivo di una delle due persone abilitate non dà automaticamente accesso ad altri. La condivisione non deve usare link pubblici. Per documenti sanitari va verificata separatamente la legittimazione degli effettivi incaricati.
 
 Se in futuro i singoli giocatori dovranno aggiornare soltanto la propria disponibilità, servirà un canale separato (ad esempio un modulo controllato, oppure un piccolo servizio che validi identità e modifiche). Non si concederà a tutti la modifica del foglio anagrafico.
 
