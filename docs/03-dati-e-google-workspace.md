@@ -1,5 +1,7 @@
 # 03 — Struttura Google: modello proposto v0.3
 
+**Accesso confermato (decisione v0.4): esclusivamente due account Google specifici possono consultare e aggiornare i dati.** Nessun link pubblico, nessun accesso in lettura per giocatori o altro staff. L'eventuale archivio sanitario richiede una verifica separata delle autorizzazioni.
+
 ## L'idea
 
 Usiamo i servizi Google già disponibili, ma senza costringere chi lavora a usare l'app. Un collaboratore può aprire Sheets, modificare un valore e ritrovarlo nella PWA; un collaboratore può modificare lo stesso dato dalla PWA e vederlo in Sheets. La sincronizzazione effettiva sarà progettata/validata durante lo sviluppo.
@@ -10,7 +12,7 @@ Non partiamo dai vecchi Excel e **non manteniamo copie parallele `.xlsx`** dei d
 
 ```text
 AEK_Squadra/                               [cartella condivisa, accesso riservato]
-├── 01_Dati/                                [solo staff autorizzato]
+├── 01_Dati/                                [solo i due account autorizzati]
 │   └── AEK_Dati_Squadra                    [Google Sheets: 5 schede]
 ├── 02_Documenti/                           [permessi per singolo documento]
 ├── 03_Modelli_e_istruzioni/                [documenti e guide]
@@ -44,7 +46,7 @@ Quando un collaboratore crea a mano un evento in Calendar, può riportarne il li
 
 ## Permessi e responsabilità
 
-Il foglio `AEK_Dati_Squadra` non deve essere visibile a tutta la squadra se include recapiti o altri dati personali. Solo responsabili, allenatori e collaboratori **autorizzati nominalmente** avranno la modifica. Essere allenatore o collaboratore non implica automaticamente essere editor. Una persona con accesso di scrittura al foglio può anche aprirlo fuori dall'app; nascondere colonne o schermate **non garantisce riservatezza**.
+Il foglio `AEK_Dati_Squadra` non deve essere visibile a tutta la squadra se include recapiti o altri dati personali. Solo **le due persone specificamente autorizzate**, tramite i rispettivi account Google, avranno accesso di lettura e modifica ai dati ordinari. Essere allenatore o collaboratore non implica automaticamente essere editor. Una persona con accesso di scrittura al foglio può anche aprirlo fuori dall'app; nascondere colonne o schermate **non garantisce riservatezza**.
 
 Nella **v1 nessun giocatore può aggiornare dati tramite l’app o il foglio**, salvo che sia anche staff formalmente autorizzato. L’accesso in sola lettura dei giocatori non è ancora deciso; un link in sola lettura al file anagrafico non deve esporre contatti e altri dati privati.
 
