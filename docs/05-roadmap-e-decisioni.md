@@ -50,9 +50,11 @@ Pagamenti, portale pubblico, ruoli con decine di livelli, notifiche push, automa
 | D-08 | Nuovo schema a 5 schede, indipendente dai vecchi Excel | Proposto v0.2 | Supporta modifica manuale e via app |
 | D-09 | Calendar fonte ufficiale per data/ora/luogo; `Eventi` è solo un indice | Proposto v0.2 | Niente doppio calendario |
 | D-10 | ID permanenti per persone ed eventi, indipendenti dalla riga | Proposto v0.2 | Evita collegamenti fragili |
+| D-11 | **Solo due persone esplicitamente autorizzate possono accedere ai dati ordinari, sia in lettura sia in modifica** | **CONFERMATA — 2026-11-09; specifica ulteriormente D-05** | Nessun accesso giocatore/altro staff per la v1 |
+| D-12 | Valutare recupero da vecchio gestionale di dossier giocatore, documenti/scadenze, quote, stagioni, convocazioni, presenze e stampe leggere | Da valutare — [analisi](11-recupero-funzioni-vecchio-gestionale.md) | Recuperare funzioni, non complessità tecnica |
 
 ## Regola di avanzamento
 
-La scelta D-05 è una decisione consolidata; restano aperte la visibilità in lettura per i giocatori e la lista concreta degli account autorizzati.
+La scelta D-11 specifica D-05: nella v1 **solo due persone accedono ai dati (lettura e modifica)**. Non è previsto accesso giocatori, neppure in lettura. Restano da identificare privatamente i due account e da verificare la liceità degli accessi ai dati sanitari.
 
 Non aprire la fase seguente finché la precedente non è stata provata con i processi reali. Una nuova funzionalità deve sempre indicare **chi la userà, quando, quale dato legge/scrive e come capire se funziona**.
