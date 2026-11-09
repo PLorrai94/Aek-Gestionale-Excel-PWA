@@ -33,7 +33,9 @@ L'MVP non deve necessariamente includere tutto al primo rilascio: **prima elenco
 
 ## Esplicitamente fuori perimetro
 
-Pagamenti, quote, tesoreria, fatture, rimborsi, fatture fiscali, PayPal/Stripe; inventario complesso; statistiche sportive avanzate, classifiche, intelligenza artificiale, notifiche push automatiche, gestione multi-società; gestione sanitaria, certificati medici e documenti d'identità; portali pubblici per famiglie, automazioni e workflow burocratici; server dedicati e architettura a microservizi.
+Pagamenti online, tesoreria, fatture, rimborsi, fatture fiscali, PayPal/Stripe; inventario complesso; statistiche sportive avanzate, classifiche, intelligenza artificiale, notifiche push automatiche, gestione multi-società; gestione sanitaria, certificati medici e documenti d'identità; portali pubblici per famiglie, automazioni e workflow burocratici; server dedicati e architettura a microservizi.
+
+**In valutazione dopo la v0.3:** un semplice registro delle quote già versate e un archivio di documenti Drive per componente, senza elaborare transazioni o gestire contabilità. Vedi [10 — Quote e documenti personali](10-quote-documenti-drive.md). Questa aggiunta non è ancora un requisito approvato.
 
 I dati personali davvero necessari saranno definiti prima della raccolta: non usare il foglio per memorizzare informazioni superflue.
 
