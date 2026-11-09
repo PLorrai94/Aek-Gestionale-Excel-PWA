@@ -1,14 +1,14 @@
 # AEK Gestionale — Documentazione del progetto
 
-> **Versione documentazione:** 0.3 — 9 novembre 2026. **Solo progettazione:** nessuna applicazione, foglio Google o calendario creato da questa documentazione.
+> **Versione documentazione:** 0.4 (analisi funzionale e accessi) — 9 novembre 2026. **Solo progettazione:** nessuna applicazione, foglio Google o calendario creato da questa documentazione.
 
 AEK Gestionale è un progetto **semplice** per organizzare una sola squadra amatoriale: componenti, allenamenti, partite, convocazioni, disponibilità, presenze e documenti.
 
 L'interfaccia futura sarà una **PWA mobile-first** installabile su iPhone/Android e usabile via browser. Il progetto si basa su Google Sheets, Calendar, Drive e collegamenti a Gmail: non sostituisce questi strumenti, li unisce.
 
-## Decisione confermata v0.3: chi può modificare i dati
+## Decisione confermata: accesso ai dati soltanto per 2 persone
 
-**Solo responsabili, allenatori e collaboratori espressamente autorizzati potranno modificare i dati nella prima versione**, tanto dal foglio Google quanto dalla futura app. Il ruolo sportivo non assegna automaticamente accesso: serve una condivisione Google esplicita. Giocatori non autorizzati e persone esterne non modificano l'archivio; l'eventuale consultazione dei dati da parte dei giocatori è ancora da definire. I dati privati non devono essere divulgati tramite fogli o collegamenti pubblici. I dettagli sono in [04 — Architettura e sicurezza](docs/04-architettura-e-sicurezza.md).
+**Esattamente due persone autorizzate potranno consultare e modificare tutti i dati ordinari della squadra nella prima versione**. Useranno due account Google specifici con condivisioni private su Sheets, Drive e Calendar. Giocatori, altri allenatori/collaboratori ed esterni non hanno accesso, neppure in sola lettura. L'accesso a eventuali dati sanitari va autorizzato separatamente secondo necessità e condizioni applicabili: i due account non sono automaticamente legittimati a tutto. I dettagli sono in [04 — Architettura e sicurezza](docs/04-architettura-e-sicurezza.md) e [11 — Analisi vecchio gestionale](docs/11-recupero-funzioni-vecchio-gestionale.md).
 
 ## Decisione v0.2: progettare uno schema nuovo da zero
 
@@ -36,6 +36,7 @@ La **data, l'ora e il luogo degli eventi** rimangono in **Google Calendar** (uni
 8. [Operazioni manuali e dall'app](docs/08-procedure-e-sincronizzazione.md) — **nuovo**
 9. [Esempi con dati fittizi](docs/09-esempi-dati.md) — **nuovo**
 10. [Quote e documenti personali su Drive](docs/10-quote-documenti-drive.md) — **proposta da discutere, non ancora approvata**
+11. [Recupero delle funzioni utili dal vecchio gestionale](docs/11-recupero-funzioni-vecchio-gestionale.md) — **analisi e priorità proposte**
 
 ## Regole non negoziabili
 
@@ -43,9 +44,9 @@ La **data, l'ora e il luogo degli eventi** rimangono in **Google Calendar** (uni
 - **Modifiche manuali e dall'app equivalenti**: la UI non deve richiedere colonne o formule che un editor umano non possa capire.
 - **ID immutabili**: i collegamenti non dipendono dal numero della riga né da nome/cognome.
 - **Nessuna gestione pagamenti** o contabilità.
-- **Privacy e autorizzazioni**: modifica solo a responsabili, allenatori e collaboratori esplicitamente autorizzati; i giocatori non sono editor nella v1. Le protezioni delle celle non sono misure di sicurezza.
+- **Privacy e autorizzazioni**: accesso ai dati ordinari riservato ai due account Google esplicitamente autorizzati, senza accessi giocatore nella v1. Per i certificati sanitari servono verifiche/autorizzazioni specifiche. Le protezioni delle celle non sono misure di sicurezza.
 - **Niente codice o credenziali in questa fase**: il repository pubblico contiene solo documentazione e, in futuro, esempi *fittizi*.
 
 ## Stato
 
-Il criterio sugli editor è **confermato**; gli altri aspetti rimangono uno **schema proposto**, non ancora validato dalla squadra. L'elenco dei campi è volutamente piccolo. Non è stata effettuata alcuna migrazione dagli Excel esistenti.
+Il criterio dei **due utenti autorizzati è confermato**; gli altri aspetti rimangono uno **schema proposto**, non ancora validato dalla squadra. L'elenco dei campi è volutamente piccolo. Non è stata effettuata alcuna migrazione dagli Excel esistenti.
