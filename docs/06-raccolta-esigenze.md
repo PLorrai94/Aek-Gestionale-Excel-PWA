@@ -17,12 +17,12 @@ Questa pagina serve a parlare con lo staff, non è un modulo obbligatorio. Compi
 
 ## Utenti e permessi
 
-- [x] Nella v1 possono aggiornare i dati soltanto responsabili, allenatori e collaboratori **esplicitamente autorizzati**.
+- [x] Nella v1 **solo due persone specifiche** possono consultare e aggiornare i dati ordinari, con accessi Google nominativi.
 - [ ] Chi avrà il compito di assegnare e revocare le autorizzazioni? (Qui documentare ruoli, non nomi personali.)
-- [ ] Tutti i giocatori devono entrare nell'app oppure solo responsabili/allenatori?
+- [x] I giocatori **non** entrano nell'app e non consultano i dati in questa prima versione.
 - [x] Nella v1 i componenti non autorizzati **non** possono modificare né disponibilità né anagrafica.
-- [ ] I giocatori avranno accesso in sola lettura a una vista sicura, o useranno solo i normali canali di comunicazione?
-- [ ] Chi può vedere email e telefoni? Chi autorizza nuovi utenti?
+- [x] I giocatori non hanno accesso in lettura nella v1; eventuali canali informativi futuri saranno progettati separatamente.
+- [x] Email e telefoni nell'archivio operativo sono accessibili solo alle due persone autorizzate; la proprietà/condivisione dei file è da definire in pratica.
 - [ ] Si usano Gmail personali o Google Workspace della squadra?
 
 ## Esperienza d'uso
