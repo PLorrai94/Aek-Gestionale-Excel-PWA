@@ -89,16 +89,13 @@ Riferimenti: [Commissione europea — dati particolari](https://commission.europ
 
 Foto profilo e immagini riconoscibili sono dati personali. Distinguere l'uso amministrativo della foto dalla **pubblicazione** sul sito/social: sono finalità differenti e potrebbero richiedere autorizzazioni o basi giuridiche distinte. Conservare eventuali liberatorie firmate in cartelle accessibili solo agli incaricati e prevedere una procedura per revoche, cessazione dell'uso e conservazione. Per minorenni verificare i requisiti applicabili e l'autorizzazione di chi esercita la responsabilità genitoriale.
 
-## Concessione accessi: decisione da prendere
+## Concessione accessi: due persone soltanto (decisione v0.4)
 
-La v0.3 ha confermato che **solo responsabili, allenatori e collaboratori autorizzati modificano i dati**. Questa decisione resta valida. Qui si propone un controllo più granulare:
+La decisione più recente è che **soltanto due persone specifiche** possano consultare e modificare i dati operativi, mediante due account Google autorizzati. Non è previsto alcun accesso alle cartelle da parte dei giocatori o di altri allenatori, collaboratori ed esterni. Nessuna condivisione tramite link pubblico.
 
-- **Anagrafica e partecipazioni:** staff operativo autorizzato;
-- **Quote e ricevute:** soli incaricati della registrazione delle quote;
-- **Foto e liberatorie:** incaricati documentazione/comunicazione;
-- **Certificati sanitari:** gruppo ancor più ristretto, legittimato allo specifico trattamento.
+**Dato sanitario:** il fatto di essere una delle due persone non conferisce automaticamente la legittimazione a trattare certificati medici. Occorre confermare separatamente chi può accedere, perché e per quanto tempo. Se solo una delle due persone è autorizzata ai certificati, l'archivio sanitario deve essere separato (o protetto con una restrizione effettiva e verificata) rispetto alle cartelle accessibili a entrambe.
 
-La frase "autorizzato a modificare i dati" **non comporta automaticamente** il diritto a leggere ogni categoria di documento.
+Per quote e ricevute, foto e liberatorie, verificare comunque quali dati sono necessari e quali entrambe le persone devono realmente conoscere. Le scelte su contenuti e scadenze sono ancora proposte, non autorizzazioni già configurate.
 
 ## Flusso di lavoro
 
