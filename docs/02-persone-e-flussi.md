@@ -1,16 +1,17 @@
 # 02 — Persone e flussi di lavoro
 
-**Stato:** scenari iniziali, da confrontare con il lavoro reale della squadra. **Confermata la regola v1: solo staff esplicitamente autorizzato modifica i dati.**
+**Stato:** scenari iniziali, da confrontare con il lavoro reale della squadra. **Decisione aggiornata: solo due persone specificamente autorizzate possono leggere e modificare i dati nella v1.**
 
 ## Persone coinvolte
 
 | Ruolo operativo | Necessità principali | Modifiche nella prima versione |
 | --- | --- | --- |
-| Responsabile / amministratore | Mantiene l'elenco ufficiale, definisce accessi e condivisioni | Sì, tutte le informazioni organizzative consentite |
-| Allenatore / collaboratore | Consulta squadra e agenda, aggiorna convocazioni e presenze | Sì, soltanto con autorizzazione nominativa all’accesso Google |
-| Giocatore / componente | Potrà consultare solo le informazioni rese disponibili | **No**; anche l’eventuale accesso in lettura è da decidere |
+| Persona autorizzata 1 (proprietario/responsabile) | Gestisce archivio, cartelle e autorizzazioni | **Sì; lettura e modifica** |
+| Persona autorizzata 2 (collaboratore incaricato) | Collabora alla gestione della squadra | **Sì; lettura e modifica** |
+| Qualunque altro allenatore/collaboratore | Nessun accesso alla v1 | **No, nemmeno lettura** |
+| Giocatore / componente | Nessun accesso all'app/dati privati nella v1 | **No, nemmeno lettura** |
 
-I ruoli sono **funzionali**, non una nuova piattaforma account: l’identità prevista è Google. Una persona può avere più ruoli (per esempio dirigente e giocatore), ma **il ruolo dichiarato nel foglio `Persone` non concede permessi tecnici**: gli editor vengono autorizzati sul file Google. Nessun giocatore modifica dati nella v1 salvo sia anche un membro dello staff esplicitamente autorizzato.
+I ruoli sono **funzionali**, non una nuova piattaforma account: l’identità prevista è Google. Una persona può avere più ruoli (per esempio dirigente e giocatore), ma **il ruolo dichiarato nel foglio `Persone` non concede permessi tecnici**: gli editor vengono autorizzati sul file Google. Nessun giocatore e nessun altro staff accede nella v1: **le uniche due persone autorizzate sono determinate nominativamente mediante i rispettivi account Google**.
 
 ## Flusso A — Inserire o aggiornare una persona
 
