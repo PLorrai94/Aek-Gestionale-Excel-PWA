@@ -1,25 +1,25 @@
 {
   "id": "./",
-  "name": "AEK Gestionale",
-  "short_name": "AEK",
+  "name": "A.E.K. F.C. Gestionale",
+  "short_name": "AEK F.C.",
   "description": "Gestione semplice della squadra amatoriale",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f3f6fa",
-  "theme_color": "#0e2040",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
   "lang": "it",
   "icons": [
     {
-      "src": "./icons/aek-icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "./icons/aek-crest-original.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "./icons/aek-apple-touch.png",
-      "sizes": "180x180",
-      "type": "image/png",
+      "src": "./icons/aek-crest.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "any"
     }
   ]
