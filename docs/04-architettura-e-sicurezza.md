@@ -1,6 +1,10 @@
 # 04 — Architettura leggera e sicurezza
 
-**Stato:** proposta tecnica; nessuna app o integrazione è stata implementata. **Regola utenti v1 confermata:** modifiche riservate a responsabili, allenatori e collaboratori con autorizzazione esplicita.
+**Stato:** proposta tecnica; nessuna app o integrazione è stata implementata. **Decisione utenti aggiornata:** accesso in lettura e scrittura ai dati ordinari riservato a due sole persone, con due account Google esplicitamente autorizzati. Nessun altro utente accede nella v1.
+
+## Decisione di accesso v0.4: due account e nessun accesso esterno
+
+La condivisione Google del foglio dati, delle cartelle Drive operative e del calendario privato deve essere limitata ai **due account autorizzati**. Uno può possedere i file e l'altro essere editor; entrambi devono essere verificati in modo esplicito. Nessun accesso nemmeno in lettura per giocatori, allenatori non inclusi nei due incaricati o pubblico. Verificare il comportamento con un terzo account non autorizzato. Certificati medici e dati di salute possono richiedere accesso ancora più ristretto: non si presume che entrambe le persone possano trattarli senza un'adeguata autorizzazione.
 
 ## Il modello più semplice da verificare
 
