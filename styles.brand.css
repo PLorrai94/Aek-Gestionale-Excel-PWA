@@ -1,0 +1,133 @@
+/*
+ * AEK F.C. brand layer — based on the original Team Manager Pro theme.
+ * Purposefully separated from styles.css so styles/behaviour can be reverted independently.
+ * Source: historical ui-angular-app/src/styles.css, sidebar, navbar and home.
+ * Brand: #1A1A1A #2E2E2E #FFD700 #FFF066.
+ */
+:root {
+  color-scheme: dark;
+  --ink:#f4f4f4;--muted:#b6bac1;--blue:#ffd700;--line:#474747;
+  --bg:#1a1a1a;--panel:#2e2e2e;--green:#7ddaa0;
+}
+html,body{background:#1a1a1a;color:#f0f0f0}
+body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif}
+h1,h2,h3,.stat strong,.logo,.brand strong{font-family:"Segoe UI",system-ui,sans-serif}
+h1,h2,h3{letter-spacing:-.025em;color:#f5f5f5}
+p{color:#c5c5c5}
+.layout{background:#1a1a1a}
+.sidebar{background:linear-gradient(180deg,#262626 0%,#171717 100%);border-right:1px solid #49401b;box-shadow:2px 0 15px #0005}
+.brand{border-bottom:1px solid #414141;padding-bottom:22px;margin-bottom:20px;gap:13px}
+.brand strong{font-weight:800;font-size:1rem;color:#ffd700;letter-spacing:.01em}
+.brand small{color:#c0c0c0;font-size:.7rem;letter-spacing:.07em;text-transform:uppercase}
+.aek-crest{width:45px;height:52px;object-fit:contain;flex:none;filter:drop-shadow(0 2px 8px #0008)}
+.navlink{color:#e0e0e0}
+.nav-symbol{color:#ffd700}
+.navlink.active{background:linear-gradient(100deg,#ffd700,#ffe970);color:#181818;box-shadow:0 5px 16px #0003,inset 0 0 0 1px #ffea6a}
+.navlink.active .nav-symbol{color:#171717}
+.navlink:hover{background:#434343;color:#fff}
+.navlink.active:hover{background:#ffea72;color:#171717}
+.sidebar-footer{border-top-color:#434343}
+.sidebar-footer .small{color:#b9b9b9}
+.topbar{background:#242424;border-bottom:2px solid #e6bd00;color:#f6f6f6}
+.top-status{color:#dadada}
+.status-dot{background:#e6a24c}
+.status-dot.online{background:#57d48c}
+.mobile-brand{color:#ffdb18}
+.mobile-brand span{color:#f7f7f7}
+.mobile-brand-img{width:36px;height:36px;object-fit:contain;vertical-align:middle;margin-right:7px}
+.content{background:#1a1a1a}
+.eyebrow{color:#ffd700;font-weight:800}
+.page-top h1{color:#fff}
+.pill-demo{background:#3e3518;border:1px solid #806c28;color:#ffe16a}
+.btn{background:#383838;color:#f0f0f0;border-color:#515151}
+.btn.primary{background:#ffd700;color:#171717;border-color:#ffd700;box-shadow:0 4px 16px #ffd70020}
+.btn.primary:hover{background:#fff066;color:#171717}
+.btn.soft{background:#3b3b3b;border-color:#545454;color:#ffdf65}
+.btn.soft:hover{background:#4b4b4b}
+.btn.ghost{background:transparent;color:#ddd;border-color:transparent}
+.btn.ghost:hover{background:#444}
+.btn.outline{border-color:#bf9e19;color:#ffe061;background:#2d2d2d}
+.btn.outline:hover{background:#41391b}
+.btn.text{color:#ffe061}
+.btn.light{color:#1a1a1a;background:#ffd700}
+.btn.light:hover{background:#fff066}
+.btn.hero-outline{border-color:#efcf40;background:#2d2d2d;color:#fbdc53}
+.btn:focus-visible{outline-color:#fff066}
+a:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline-color:#ffe157}
+.demo-banner{background:linear-gradient(115deg,#37321f,#2b2a25);border-color:#6c5d2a}
+.demo-banner strong{color:#ffdc3d}
+.demo-banner p{color:#ddd2ab}
+.loading{background:#333025;color:#ffe08c}
+.alert.error{background:#472327;border-color:#8b4046;color:#ffd3d7}
+.alert.success{background:#204233;border-color:#316b50;color:#cdf7dc}
+.hero{background:radial-gradient(circle at 86% 40%,#6c550b 0%,#36301a 24%,transparent 54%),linear-gradient(120deg,#292929 0%,#151515 100%);border:1px solid #5a4a1c;box-shadow:0 18px 42px #0005}
+.hero:before{content:"";height:4px;position:absolute;left:0;right:0;top:0;background:linear-gradient(90deg,#ffd700,#fff066 65%,#7d6600)}
+.hero-label{color:#ffdc48}
+.hero h2{color:#fff;letter-spacing:-.04em}
+.hero h2::first-line{color:#ffd700}
+.hero p{color:#dddddd}
+.hero-graphic{min-width:236px}
+.hero-graphic::before{width:255px;height:255px;border-color:#ffdf422e}
+.hero-graphic::after{width:184px;height:184px;border-color:#ffdf423f}
+.hero-crest{width:200px;height:200px;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 14px 15px #0009)}
+.stats{gap:16px}
+.stat,.panel{background:#2e2e2e;border:1px solid #434343;box-shadow:0 9px 26px #0003}
+.stat{border-top:3px solid #ffd700}
+.stat span{color:#d0bd70}
+.stat strong{color:#fff}
+.stat small{color:#bcbcbc}
+.panel-header p{color:#c7c7c7}
+.panel h3{color:#fff}
+.event-row,.kv,.document-inline,.quote-inline{border-bottom-color:#484848}
+.event-symbol{background:#494027;color:#ffe17a}
+.event-main strong,.person-card-info strong,.empty strong,.quote-inline strong{color:#f6f6f6}
+.event-main p,.person-card-info small,.empty p,.quote-inline p{color:#bcbcbc}
+.person-card{color:#fff}
+.person-card:hover{background:#424242}
+.person-grid .person-card{border-color:#484848}
+.avatar{background:#494022;border:1px solid #7c6830;color:#ffe474}
+.chevron{color:#e1c354}
+.tag.green{background:#213d30;color:#94e6ae}
+.tag.amber{background:#443814;color:#ffe17d}
+.tag.red{background:#4c2727;color:#f4b7b7}
+.tag.neutral{background:#454545;color:#e0e0e0}
+.searchline input,.input-field input,.input-field select{background:#212121;color:#f3f3f3;border:1px solid #5b5b5b}
+.searchline input::placeholder,.input-field input::placeholder{color:#aaa}
+.searchline input:focus,.input-field input:focus,.input-field select:focus{border-color:#ffd700;outline:2px solid #ffd70035}
+.detail-head{background:#303030;border-color:#515151}
+.detail-person h2{color:#fff}
+.muted,.kv span:first-child{color:#bbb}
+.kv strong{color:#f5f5f5}
+.divider{background:#4b4b4b}
+.document-inline a,.inline-link{color:#ffe068}
+table th{color:#ffdf67;border-bottom-color:#5a5133}
+table td{color:#d9d9d9;border-bottom-color:#484848}
+table td strong{color:#f7f7f7}
+table tbody tr:hover{background:#393939}
+.mini-summary{background:#3d3521;color:#f1dfae;border:1px solid #68552a}
+.mini-summary strong{color:#ffe26d}
+.input-field{color:#eaeaea}
+.input-field small,.hint{color:#bdbdbd}
+.settings-form input:focus-visible{outline-color:#ffd700}
+.step>span{background:#4b401c;color:#ffe16f}
+.step strong{color:#fff}
+.step p{color:#bebebe}
+.modal-backdrop{background:#000c}
+.modal{background:#292929;color:#f0f0f0;border:1px solid #5a5a5a}
+.modal-head{border-bottom:1px solid #454545;padding-bottom:14px}
+.close{background:#404040;color:#f5f5f5}
+.form-actions{border-top-color:#494949}
+.empty{color:#c6c6c6}
+.mobile-nav{background:#222;border-top:2px solid #bda118;box-shadow:0 -4px 18px #0009}
+.mobile-nav button{color:#d5d5d5}
+.mobile-nav button.selected{color:#ffe065}
+.mobile-nav button.selected span{color:#ffd700}
+@media(max-width:900px){.topbar{background:#242424}.mobile-brand{display:flex;align-items:center;font-weight:800}}
+@media(max-width:560px){
+  .hero-graphic{right:-55px;bottom:-55px;min-width:200px;opacity:.32}
+  .hero-crest{width:200px;height:200px}
+  .hero:before{height:3px}
+  .mobile-nav button{font-size:.66rem}
+  .stat:nth-child(3){border-top-color:#fff066}
+}
+@media(prefers-reduced-motion:reduce){.hero-crest{animation:none}}
