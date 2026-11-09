@@ -1,6 +1,6 @@
 # AEK Gestionale — Documentazione del progetto
 
-> **Versione documentazione:** 0.4 (analisi funzionale e accessi) — 9 novembre 2026. **Solo progettazione:** nessuna applicazione, foglio Google o calendario creato da questa documentazione.
+> **Versione documentazione:** 0.4 (analisi funzionale e accessi) — 9 novembre 2026. **Prototipo PWA disponibile su dev;** nessun foglio, calendario o archivio reale creato da questa repository.
 
 AEK Gestionale è un progetto **semplice** per organizzare una sola squadra amatoriale: componenti, allenamenti, partite, convocazioni, disponibilità, presenze e documenti.
 
@@ -15,6 +15,12 @@ Le funzioni presenti nel codice sono **anagrafica persone**, **scheda giocatore*
 **La PWA non è ancora pubblicata su un dominio né verificata con account Google reali.** Per la messa in funzione consulta [14 — Guida di avvio v0.1](docs/14-avvio-prima-versione.md). I nuovi fogli richiesti dal codice sono soltanto **Persone, Quote, Documenti**; le altre schede dello schema teorico sono proposte future. In questa fase non sono stati creati fogli, cartelle o calendari Google reali.
 
 **Test disponibili:** Node.js 20+ con il comando `node --test tests/*.test.mjs`. Nessun pacchetto esterno da installare.
+
+## Identità visiva A.E.K. F.C. ripristinata
+
+Il prototipo utilizza di nuovo lo **stemma originale con l'aquila bicipite** e la palette storica **nero `#1A1A1A`, antracite `#2E2E2E`, giallo oro `#FFD700` e giallo chiaro `#FFF066`**. Il nuovo tema vive nel file [styles.brand.css](styles.brand.css), **separato** dal CSS base per consentire regolazioni e rollback senza alterare le funzionalità. Sono state aggiornate anche le icone PWA e la cache degli asset statici.
+
+Dettagli, provenienza e procedura di ripristino: [15 — Identità grafica AEK](docs/15-identita-grafica-aek.md).
 
 ## Decisione confermata: accesso ai dati soltanto per 2 persone
 
@@ -49,6 +55,7 @@ La **data, l'ora e il luogo degli eventi** rimangono in **Google Calendar** (uni
 11. [Prima analisi del vecchio gestionale](docs/11-recupero-funzioni-vecchio-gestionale.md) — **ipotesi preliminari, nessuna priorità approvata**
 12. [Inventario completo delle funzioni presenti nel codice storico](docs/12-inventario-funzioni-implementate-vecchio-progetto.md) — **censimento neutrale, fonte principale prima di decidere**
 14. [Guida di avvio prima versione PWA](docs/14-avvio-prima-versione.md) — **configurazione Google, privacy e test**
+15. [Identità grafica A.E.K. F.C.](docs/15-identita-grafica-aek.md) — **palette originale, stemma e rollback**
 
 ## Regole non negoziabili
 
