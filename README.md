@@ -36,7 +36,8 @@ La **data, l'ora e il luogo degli eventi** rimangono in **Google Calendar** (uni
 8. [Operazioni manuali e dall'app](docs/08-procedure-e-sincronizzazione.md) — **nuovo**
 9. [Esempi con dati fittizi](docs/09-esempi-dati.md) — **nuovo**
 10. [Quote e documenti personali su Drive](docs/10-quote-documenti-drive.md) — **proposta da discutere, non ancora approvata**
-11. [Recupero delle funzioni utili dal vecchio gestionale](docs/11-recupero-funzioni-vecchio-gestionale.md) — **analisi e priorità proposte**
+11. [Prima analisi del vecchio gestionale](docs/11-recupero-funzioni-vecchio-gestionale.md) — **ipotesi preliminari, nessuna priorità approvata**
+12. [Inventario completo delle funzioni presenti nel codice storico](docs/12-inventario-funzioni-implementate-vecchio-progetto.md) — **censimento neutrale, fonte principale prima di decidere**
 
 ## Regole non negoziabili
 
@@ -48,5 +49,7 @@ La **data, l'ora e il luogo degli eventi** rimangono in **Google Calendar** (uni
 - **Niente codice o credenziali in questa fase**: il repository pubblico contiene solo documentazione e, in futuro, esempi *fittizi*.
 
 ## Stato
+
+**Fase attuale: ricognizione delle funzionalità del vecchio progetto, senza selezionare funzioni o cambiare l'architettura.** Le ipotesi dei documenti precedenti non sono decisioni di sviluppo. Il documento [12 — Inventario](docs/12-inventario-funzioni-implementate-vecchio-progetto.md) distingue codice esistente, implementazioni parziali e voci pianificate.
 
 Il criterio dei **due utenti autorizzati è confermato**; gli altri aspetti rimangono uno **schema proposto**, non ancora validato dalla squadra. L'elenco dei campi è volutamente piccolo. Non è stata effettuata alcuna migrazione dagli Excel esistenti.
