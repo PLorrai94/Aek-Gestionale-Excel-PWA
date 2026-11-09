@@ -36,7 +36,7 @@
   const safeDriveFolder=id=> /^[a-zA-Z0-9_-]{5,}$/.test(String(id||""))?"https://drive.google.com/drive/folders/"+encodeURIComponent(id):"";
   const tag=(value)=> {
     const s=String(value||"").toLowerCase();
-    const tone=/pagata|presente|attivo|valido/.test(s)?"green":/parziale|da_verificare|da_confermare/.test(s)?"amber":/inattivo|assente|scaduto/.test(s)?"red":"neutral";
+    const tone=/inattivo|assente|scaduto/.test(s)?"red":/pagata|presente|attivo|valido/.test(s)?"green":/parziale|da_verificare|da_confermare|da_pagare/.test(s)?"amber":"neutral";
     return '<span class="tag '+tone+'">'+E((value||"—").replaceAll("_"," "))+"</span>";
   };
   const btn=(label,action,cls="btn",extra="")=>'<button class="'+cls+'" type="button" data-action="'+action+'" '+extra+'>'+label+"</button>";
