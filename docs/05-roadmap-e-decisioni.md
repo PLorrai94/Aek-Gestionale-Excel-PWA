@@ -51,7 +51,11 @@ Pagamenti, portale pubblico, ruoli con decine di livelli, notifiche push, automa
 | D-09 | Calendar fonte ufficiale per data/ora/luogo; `Eventi` è solo un indice | Proposto v0.2 | Niente doppio calendario |
 | D-10 | ID permanenti per persone ed eventi, indipendenti dalla riga | Proposto v0.2 | Evita collegamenti fragili |
 | D-11 | **Solo due persone esplicitamente autorizzate possono accedere ai dati ordinari, sia in lettura sia in modifica** | **CONFERMATA — 2026-11-09; specifica ulteriormente D-05** | Nessun accesso giocatore/altro staff per la v1 |
-| D-12 | Valutare recupero da vecchio gestionale di dossier giocatore, documenti/scadenze, quote, stagioni, convocazioni, presenze e stampe leggere | Da valutare — [analisi](11-recupero-funzioni-vecchio-gestionale.md) | Recuperare funzioni, non complessità tecnica |
+| D-12 | **Censire tutte le funzioni effettivamente presenti nel vecchio codice prima di qualsiasi scelta** | **IN CORSO — [inventario](12-inventario-funzioni-implementate-vecchio-progetto.md)** | Non scegliere ora cosa mantenere, né cambiare il modello Google sulla base di ipotesi |
+
+## Blocco decisioni funzionali
+
+Il documento [12 — Inventario delle funzioni storiche](12-inventario-funzioni-implementate-vecchio-progetto.md) precede la valutazione delle nuove funzionalità. La roadmap tecnica è ancora una bozza: **nessuna nuova feature è approvata dal solo fatto di essere implementata nel vecchio progetto**.
 
 ## Regola di avanzamento
 
