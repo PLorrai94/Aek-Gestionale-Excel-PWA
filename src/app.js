@@ -52,10 +52,10 @@
   function shell(content){
     const connected=useGoogle();
     const connection=connected?"Google collegato · "+E(state.email):state.mode==="demo"?"Modalità dimostrativa":"Google non collegato";
-    return '<div class="layout"><aside class="sidebar"><div class="brand"><div class="logo">A<span>✦</span></div><div><strong>AEK Gestionale</strong><small>Team workspace</small></div></div>'+
+    return '<div class="layout"><aside class="sidebar"><div class="brand"><img class="aek-crest" src="./icons/aek-crest-original.png" width="45" height="52" alt="Stemma A.E.K. F.C."><div><strong>AEK Gestionale</strong><small>A.E.K. F.C. · Team workspace</small></div></div>'+
     '<nav class="nav">'+navs.map(([key,label])=>'<button class="navlink '+(state.page===key?"active":"")+'" data-action="nav" data-page="'+key+'"><span class="nav-symbol">'+svgIcon(key)+'</span>'+label+'</button>').join("")+'</nav>'+
     '<div class="sidebar-footer"><span class="small">Prima versione · v0.1</span><span class="small">Solo 2 account autorizzati</span></div></aside>'+
-    '<div class="main"><header class="topbar"><div class="mobile-brand">✦ AEK <span>Gestionale</span></div><div class="top-status"><span class="status-dot '+(connected?"online":"")+'"></span>'+connection+'</div><div class="top-actions">'+btn("↻ Aggiorna","refresh","btn soft small")+
+    '<div class="main"><header class="topbar"><div class="mobile-brand"><img class="mobile-brand-img" src="./icons/aek-crest-original.png" alt="Stemma A.E.K. F.C."><span><b>AEK</b> Gestionale</span></div><div class="top-status"><span class="status-dot '+(connected?"online":"")+'"></span>'+connection+'</div><div class="top-actions">'+btn("↻ Aggiorna","refresh","btn soft small")+
     (connected?btn("Esci","logout","btn ghost small"):btn("Collega Google","go-settings","btn primary small"))+'</div></header>'+
     '<main class="content"><div class="page-top"><div><p class="eyebrow">AEK / ORGANIZZAZIONE SQUADRA</p><h1>'+pageTitle()+'</h1></div><div class="page-controls">'+
     (state.mode==="demo"?'<span class="pill-demo">● DATI FITTIZI</span>':'')+'</div></div>'+
@@ -80,7 +80,7 @@
     const remaining=quotes().reduce((acc,q)=>acc+Math.max(0,(C.parseEuro(q.importo_previsto)||0)-(C.parseEuro(q.importo_versato)||0)),0);
     const next=documents().filter(d=>d.scadenza&&new Date(d.scadenza+"T12:00:00")<=new Date(Date.now()+30*86400000)&&d.stato!=="archiviato").length;
     return '<div class="hero"><div><div class="hero-label">IL QUADRO GENERALE</div><h2>Tutto ciò che serve<br>alla tua squadra.</h2><p>Persone, impegni e documenti in un unico posto. Google rimane la fonte dei dati.</p>'+
-    '<div class="hero-actions">'+btn("Apri la squadra →","go-squadra","btn light")+btn("Visualizza agenda","go-agenda","btn hero-outline")+'</div></div><div class="hero-graphic"><div class="hero-ball">✦</div></div></div>'+
+    '<div class="hero-actions">'+btn("Apri la squadra →","go-squadra","btn light")+btn("Visualizza agenda","go-agenda","btn hero-outline")+'</div></div><div class="hero-graphic"><img class="hero-crest" src="./icons/aek-crest-original.png" alt="Stemma originale A.E.K. F.C."></div></div>'+
     '<div class="stats"><div class="stat"><span>COMPONENTI ATTIVI</span><strong>'+active+'</strong><small>Anagrafica condivisa</small></div>'+
     '<div class="stat"><span>QUOTE DA VERIFICARE</span><strong>'+C.euro(remaining)+'</strong><small>Importo residuo indicativo</small></div>'+
     '<div class="stat"><span>DOCUMENTI DA CONTROLLARE</span><strong>'+next+'</strong><small>Scaduti o entro 30 giorni</small></div></div>'+
