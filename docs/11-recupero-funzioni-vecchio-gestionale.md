@@ -1,5 +1,7 @@
-# 11 — Funzioni da recuperare dal vecchio AEK Gestionale
+# 11 — Prima ricognizione (preliminare) del vecchio AEK Gestionale
 
+> **AVVISO: questa era una selezione preliminare di idee, NON la lista definitiva delle funzioni implementate e NON una decisione di sviluppo.** Il censimento basato sul codice è nel nuovo [12 — Inventario delle funzioni](12-inventario-funzioni-implementate-vecchio-progetto.md). Non attribuire a questo documento una priorità approvata.
+>
 > **Analisi del materiale storico**, 9 novembre 2026 — proposta di selezione funzionale, senza riutilizzo automatico del vecchio codice. 
 >
 > **Decisione attuale D-11 (confermata): accesso ai dati riservato a due sole persone.** La lista di funzionalità seguente **non** è una lista di requisiti approvati.
