@@ -48,11 +48,11 @@
     if (!expected) throw new Error("Scheda sconosciuta: "+table);
     const header = rows[0].map(x => String(x).trim());
     if (header.join("|") !== expected.join("|")) throw new Error("Intestazioni di "+table+" non corrispondenti al modello. Consulta docs/14-avvio-prima-versione.md");
-    return rows.slice(1).filter(row=>row.some(x=>String(x ?? "").trim())).map((row,index)=>{
+    return rows.slice(1).map((row,index)=>{
       const item = Object.fromEntries(expected.map((key,j)=>[key,String(row[j] ?? "")]));
       Object.defineProperty(item,"_sheetRow",{value:index+2,enumerable:false,writable:true});
       return item;
-    });
+    }).filter(item=>expected.some(key=>String(item[key]).trim()));
   };
   const valuesOf = (table, item) => TABLES[table].map(key=>String(item[key] ?? ""));
   const parseEuro = raw => {
