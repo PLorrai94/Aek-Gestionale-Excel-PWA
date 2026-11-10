@@ -6,6 +6,14 @@ AEK Gestionale è un progetto **semplice** per organizzare una sola squadra amat
 
 L'interfaccia futura sarà una **PWA mobile-first** installabile su iPhone/Android e usabile via browser. Il progetto si basa su Google Sheets, Calendar, Drive e collegamenti a Gmail: non sostituisce questi strumenti, li unisce.
 
+## Requisito confermato: costo zero e dati accessibili a due persone
+
+**Nessuna prova gratuita a tempo, nessuna carta di credito, nessun abbonamento, nessuna fatturazione a consumo.** Se un servizio richiede billing o un piano a pagamento, va evitato o sostituito. La soluzione gratuita a oggi non costituisce una garanzia perpetua sulle condizioni future dei fornitori.
+
+**GitHub Pages è gratuito ma il sito resta pubblico**: le informazioni della squadra sono protette dalle condivisioni private di Google, limitate a due account. Per rendere privata **anche la pagina stessa** serve una barriera di accesso sul server/hosting, da scegliere senza introdurre obblighi di pagamento. I due requisiti non vanno confusi.
+
+Informazioni aggiornate e fonti: [16 — Condivisione, accessi e costo zero](docs/16-condivisione-accessi-e-costi-zero.md).
+
 ## Prima versione applicativa v0.1 (branch dev)
 
 Il repository contiene ora un **prototipo PWA mobile-first realmente navigabile**, senza build: apri [index.html](index.html) su un hosting statico HTTPS per visualizzare la **demo interattiva con dati fittizi**.
@@ -56,6 +64,7 @@ La **data, l'ora e il luogo degli eventi** rimangono in **Google Calendar** (uni
 12. [Inventario completo delle funzioni presenti nel codice storico](docs/12-inventario-funzioni-implementate-vecchio-progetto.md) — **censimento neutrale, fonte principale prima di decidere**
 14. [Guida di avvio prima versione PWA](docs/14-avvio-prima-versione.md) — **configurazione Google, privacy e test**
 15. [Identità grafica A.E.K. F.C.](docs/15-identita-grafica-aek.md) — **palette originale, stemma e rollback**
+16. [Condivisione Google, accessi e costo zero](docs/16-condivisione-accessi-e-costi-zero.md) — **requisito vincolante e compromessi del sito pubblico**
 
 ## Regole non negoziabili
 
