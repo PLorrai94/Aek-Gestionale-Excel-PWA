@@ -32,7 +32,7 @@ test("PWA e cache puntano agli asset AEK aggiornati",()=>{
   for(const path of ["styles.brand.css","aek-crest-original.png","aek-crest.svg"]){
     assert.ok(worker.includes(path), "Risorsa assente dalla cache PWA: "+path);
   }
-  assert.ok(worker.includes("aek-static-v2-brand"));
+  assert.ok(worker.includes("aek-static-v3-test"));
 });
 
 test("I file del brand esistono nel progetto",()=>{
