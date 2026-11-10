@@ -1,5 +1,5 @@
 /* Cache solo dello scheletro pubblico, MAI dei dati Google, token o documenti. */
-const CACHE="aek-static-v2-brand";
+const CACHE="aek-static-v3-test";
 const ASSETS=["./","./index.html","./styles.css","./styles.brand.css","./src/core.js","./src/google.js","./src/app.js","./manifest.webmanifest","./icons/aek-icon.svg","./icons/aek-apple-touch.png","./icons/aek-crest.svg","./icons/aek-crest-original.png"];
 self.addEventListener("install",event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));
