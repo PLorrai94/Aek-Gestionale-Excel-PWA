@@ -2,6 +2,8 @@
 
 **Stato:** prototipo sorgente sul branch dev; non ancora distribuito, né provato con account Google reali. Il repository è pubblico, **i dati Google devono rimanere privati**.
 
+> **Avvertenza successiva (novembre 2026):** per l'uso continuativo e senza costi, segui **prima** [16 — Accessi e costo zero](16-condivisione-accessi-e-costi-zero.md). La modalità Google OAuth **Testing** ha autorizzazioni che scadono dopo 7 giorni (non è una prova commerciale, ma non è ideale per l'uso permanente); la pubblicazione in production per due utenti conosciuti può richiedere gestione degli avvisi per app non verificata. L'app attuale usa uno scope Google Drive ampio/restricted da ridurre e verificare prima di usare documenti reali. **Non collegare account Cloud Billing o attivare servizi che richiedono una carta di credito.** Inoltre, GitHub Pages è pubblico: protegge i dati Google tramite condivisioni, non l'accesso alla pagina HTML.
+
 ## Cosa offre oggi il codice v0.1
 
 - PWA responsive con cinque sezioni: Panoramica, Squadra, Agenda, Documenti, Quote; più Impostazioni.
