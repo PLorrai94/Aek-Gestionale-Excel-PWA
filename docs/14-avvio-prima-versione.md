@@ -4,10 +4,12 @@
 
 > **Avvertenza successiva (novembre 2026):** per l'uso continuativo e senza costi, segui **prima** [16 — Accessi e costo zero](16-condivisione-accessi-e-costi-zero.md). La modalità Google OAuth **Testing** ha autorizzazioni che scadono dopo 7 giorni (non è una prova commerciale, ma non è ideale per l'uso permanente); la pubblicazione in production per due utenti conosciuti può richiedere gestione degli avvisi per app non verificata. L'app attuale usa uno scope Google Drive ampio/restricted da ridurre e verificare prima di usare documenti reali. **Non collegare account Cloud Billing o attivare servizi che richiedono una carta di credito.** Inoltre, GitHub Pages è pubblico: protegge i dati Google tramite condivisioni, non l'accesso alla pagina HTML.
 
+> **Per iniziare a provare senza Google:** è disponibile la modalità locale persistente della v0.2. Segui [17 — Prova personale](17-provare-aek-gestionale.md), senza creare fogli né configurare OAuth. Usa esclusivamente dati inventati: in questa modalità i record si salvano nel browser locale (non su Google) e possono essere azzerati. GitHub Pages va attivato dal proprietario in Settings → Pages → branch dev /(root).
+
 ## Cosa offre oggi il codice v0.1
 
 - PWA responsive con cinque sezioni: Panoramica, Squadra, Agenda, Documenti, Quote; più Impostazioni.
-- Demo interattiva con **dati fittizi**, non persistenti (si azzera ricaricando).
+- Demo interattiva con **dati fittizi**, ora persistenti nel browser locale dal prototipo v0.2 (si azzerano con «Ripristina dati prova» o cancellando la memoria del sito).
 - Anagrafica (aggiunta/modifica/stato attivo-inattivo), ricerca, scheda individuale.
 - Quote: importi previsti e versati, stato calcolato, ricevuta come link a Google Drive. **Nessun pagamento online.**
 - Documenti: categoria, descrizione, scadenza, stato, link Drive.
@@ -93,7 +95,7 @@ La PWA non chiede e non conserva password. Gli access token restano **solo in me
 ## 6. Prove prima dei dati reali
 
 - Aprire la demo con browser e smartphone; verificare che tutti i nomi siano inventati.
-- Aggiungere un componente in demo e ricaricare la pagina: le modifiche demo devono sparire.
+- Aggiungere un componente fittizio in demo e ricaricare: dal prototipo v0.2 il record **deve restare**; provare poi il comando «Ripristina dati prova».
 - Collegare Google con il primo account; verificare la lettura delle tre schede.
 - Aggiungere un componente fittizio nella PWA, controllare la sua nuova riga direttamente in Google Sheets.
 - Modificare un nome dal foglio, premere «Aggiorna» nell'app e verificare il nuovo valore.
