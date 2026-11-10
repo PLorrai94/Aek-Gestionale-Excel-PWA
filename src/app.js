@@ -5,6 +5,20 @@
   const $=id=>document.getElementById(id);
   const E=C.esc;
   const CONFIG_KEY="aek_v1_config";
+  const DEMO_KEY="aek_v1_demo_solo_test";
+  const loadDemo=()=>{
+    try {
+      const blob=JSON.parse(localStorage.getItem(DEMO_KEY)||"null");
+      if(blob?.version===1 && ["Persone","Quote","Documenti","Eventi"].every(t=>Array.isArray(blob.data?.[t])))return blob.data;
+    }catch{}
+    return C.demo();
+  };
+  const saveDemo=()=>{
+    try{
+      localStorage.setItem(DEMO_KEY,JSON.stringify({version:1,data:state.data}));
+      return true;
+    }catch{return false;}
+  };
   const defaults={clientId:"",spreadsheetId:"",calendarId:"",driveRootFolderId:""};
   let initialConfig={...defaults};
   try {
@@ -13,7 +27,7 @@
   } catch {}
   const state={
     page:"home",mode:"demo",config:initialConfig,store:null,email:"",
-    data:C.demo(),personId:"",modal:null,busy:false,error:"",notice:"",
+    data:loadDemo(),personId:"",modal:null,busy:false,error:"",notice:"",
     search:"",docFile:null
   };
   const people=()=>state.data.Persone||[];
@@ -54,14 +68,14 @@
     const connection=connected?"Google collegato · "+E(state.email):state.mode==="demo"?"Modalità dimostrativa":"Google non collegato";
     return '<div class="layout"><aside class="sidebar"><div class="brand"><img class="aek-crest" src="./icons/aek-crest-original.png" width="45" height="52" alt="Stemma A.E.K. F.C."><div><strong>AEK Gestionale</strong><small>A.E.K. F.C. · Team workspace</small></div></div>'+
     '<nav class="nav">'+navs.map(([key,label])=>'<button class="navlink '+(state.page===key?"active":"")+'" data-action="nav" data-page="'+key+'"><span class="nav-symbol">'+svgIcon(key)+'</span>'+label+'</button>').join("")+'</nav>'+
-    '<div class="sidebar-footer"><span class="small">Prima versione · v0.1</span><span class="small">Solo 2 account autorizzati</span></div></aside>'+
+    '<div class="sidebar-footer"><span class="small">Versione di prova · v0.2</span><span class="small">Solo 2 account autorizzati</span></div></aside>'+
     '<div class="main"><header class="topbar"><div class="mobile-brand"><img class="mobile-brand-img" src="./icons/aek-crest-original.png" alt="Stemma A.E.K. F.C."><span><b>AEK</b> Gestionale</span></div><div class="top-status"><span class="status-dot '+(connected?"online":"")+'"></span>'+connection+'</div><div class="top-actions">'+btn("↻ Aggiorna","refresh","btn soft small")+
     (connected?btn("Esci","logout","btn ghost small"):btn("Collega Google","go-settings","btn primary small"))+'</div></header>'+
     '<main class="content"><div class="page-top"><div><p class="eyebrow">AEK / ORGANIZZAZIONE SQUADRA</p><h1>'+pageTitle()+'</h1></div><div class="page-controls">'+
     (state.mode==="demo"?'<span class="pill-demo">● DATI FITTIZI</span>':'')+'</div></div>'+
     (state.error?'<div class="alert error" role="alert">'+E(state.error)+' <button data-action="dismiss">×</button></div>':'')+
     (state.notice?'<div class="alert '+(state.notice.type==="error"?"error":"success")+'">'+E(state.notice.text)+' <button data-action="dismiss">×</button></div>':'')+
-    (state.mode==="demo"?'<div class="demo-banner"><div><strong>Anteprima interattiva</strong><p>I dati mostrati sono inventati e le modifiche demo non vengono salvate su Google.</p></div>'+btn("Configura la versione reale","go-settings","btn outline")+'</div>':"")+
+    (state.mode==="demo"?'<div class="demo-banner"><div><strong>Modalità prova personale</strong><p>Le modifiche restano salvate soltanto in questo browser. NON inserire dati veri o documenti sensibili.</p></div><div class="demo-actions">'+btn("Ripristina dati prova","reset-demo","btn soft small")+btn("Configurazione Google","go-settings","btn outline")+'</div></div>':"")+
     (state.busy?'<div class="loading">Operazione in corso…</div>':"")+
     content+'</main><div class="mobile-nav">'+navs.filter(x=>x[0]!=="settings").map(([key,label])=>'<button class="'+(state.page===key?"selected":"")+'" data-action="nav" data-page="'+key+'"><span>'+svgIcon(key)+'</span>'+label+'</button>').join("")+'<button data-action="go-settings"><span>⚙</span>Altro</button></div></div></div>'+modalHtml();
   }
@@ -240,13 +254,14 @@
       const list=state.data[table];
       const i=list.findIndex(x=>x[key]===item[key]);
       if(i>=0)list[i]=item;else list.push(item);
+      if(!saveDemo())throw new Error("Non è possibile salvare la prova in questo browser (spazio pieno o navigazione privata).");
     } else {
       if(!useGoogle())throw new Error("Collega prima il tuo account Google.");
       await state.store.upsert(table,item,original);
       await reload();
     }
     state.modal=null;
-    state.notice={text:"Salvataggio completato"+(state.mode==="demo"?" (solo demo).":"."),type:"success"};
+    state.notice={text:state.mode==="demo"?"Dati di prova salvati su questo dispositivo.":"Salvataggio completato su Google.",type:"success"};
   }
   async function act(button){
     const action=button.dataset.action,id=button.dataset.id||"";
@@ -264,7 +279,14 @@
     if(action==="new-doc"){openModal("doc");return;}
     if(action==="edit-doc"){openModal("doc",id);return;}
     if(action==="demo"){
-      state.store?.disconnect();state.store=null;state.email="";state.mode="demo";state.data=C.demo();state.personId="";state.page="home";state.error="";render();return;
+      state.store?.disconnect();state.store=null;state.email="";state.mode="demo";state.data=loadDemo();state.personId="";state.page="home";state.error="";render();return;
+    }
+    if(action==="reset-demo"){
+      if(!g.confirm("Ripristinare i dati fittizi iniziali? Le modifiche locali di prova andranno perse."))return;
+      try{localStorage.removeItem(DEMO_KEY);}catch{}
+      state.data=C.demo();state.personId="";state.modal=null;state.page="home";
+      notice("Dati fittizi ripristinati. La prova è pronta.");
+      return;
     }
     if(action==="logout"){
       state.store?.disconnect();state.store=null;state.email="";state.data={Persone:[],Quote:[],Documenti:[],Eventi:[]};state.mode="google";state.personId="";state.page="settings";notice("Disconnesso: nessun dato personale è rimasto nella pagina.");return;
@@ -310,7 +332,7 @@
       const f=new FormData(form);
       state.config=Object.fromEntries(Object.keys(defaults).map(x=>[x,C.normaliseText(f.get(x))]));
       localStorage.setItem(CONFIG_KEY,JSON.stringify(state.config));
-      state.store?.disconnect();state.store=null;state.email="";state.mode="demo";state.data=C.demo();
+      state.store?.disconnect();state.store=null;state.email="";state.mode="demo";state.data=loadDemo();
       notice("Impostazioni salvate su questo dispositivo. Ora premi «Accedi con Google».");return;
     }
     if(["person","quote","doc"].includes(kind)){
