@@ -57,6 +57,14 @@ Pagamenti, portale pubblico, ruoli con decine di livelli, notifiche push, automa
 
 Il documento [12 — Inventario delle funzioni storiche](12-inventario-funzioni-implementate-vecchio-progetto.md) precede la valutazione delle nuove funzionalità. La roadmap tecnica è ancora una bozza: **nessuna nuova feature è approvata dal solo fatto di essere implementata nel vecchio progetto**.
 
+## Requisito economico vincolante (D-13, confermato 2026-11-10)
+
+**L'intero progetto deve funzionare senza prove commerciali a tempo, abbonamenti obbligatori, carte di credito, fatturazione collegata o servizi a consumo.** Se una funzionalità supera un limite gratuito o richiede un servizio a pagamento, si riduce o si sospende invece di abilitare automaticamente fatturazione. **Non promettere gratuità incondizionata per sempre**: i fornitori possono modificare quote e condizioni.
+
+La PWA statica su GitHub Pages (piano gratuito) è pubblicamente scaricabile, mentre l'accesso ai dati Google si limita ai due account già stabiliti in D-11. Per un sito letteralmente privato (HTML inaccessibile a terzi) occorre una scelta di hosting/autenticazione aggiuntiva, da verificare con la stessa regola di costo zero e senza carta. Riferimento: [16 — Condivisione e costo zero](16-condivisione-accessi-e-costi-zero.md).
+
+**Bloccante prima dei dati reali:** verificare OAuth Testing (7 giorni) vs personal use/production, ridurre lo scope Drive `drive` dove possibile e testare le ACL Google con un account terzo.
+
 ## Regola di avanzamento
 
 La scelta D-11 specifica D-05: nella v1 **solo due persone accedono ai dati (lettura e modifica)**. Non è previsto accesso giocatori, neppure in lettura. Restano da identificare privatamente i due account e da verificare la liceità degli accessi ai dati sanitari.
