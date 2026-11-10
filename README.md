@@ -14,13 +14,15 @@ L'interfaccia futura sarà una **PWA mobile-first** installabile su iPhone/Andro
 
 Informazioni aggiornate e fonti: [16 — Condivisione, accessi e costo zero](docs/16-condivisione-accessi-e-costi-zero.md).
 
-## Prima versione applicativa v0.1 (branch dev)
+## Versione di prova v0.2 (branch dev)
 
-Il repository contiene ora un **prototipo PWA mobile-first realmente navigabile**, senza build: apri [index.html](index.html) su un hosting statico HTTPS per visualizzare la **demo interattiva con dati fittizi**.
+Il repository contiene una **PWA navigabile senza build**, con modalità prova locale. I dati fittizi modificati in demo vengono ora **salvati nel browser di prova** e si possono ripristinare con il pulsante dedicato. Nessun dato test viene inviato a Google.
+
+**Per aprirla da telefono senza pagare:** vai in [Settings → Pages](https://github.com/PLorrai94/Aek-Gestionale-Excel-PWA/settings/pages) e seleziona `Deploy from a branch` → `dev` → `/(root)` → `Save`. Solo dopo che GitHub mostra il collegamento **Visit site** la PWA è effettivamente online. Leggi [17 — Come provarla subito](docs/17-provare-aek-gestionale.md). **GitHub Pages rende pubblica l'interfaccia**, quindi usa soltanto dati inventati in questo test.
 
 Le funzioni presenti nel codice sono **anagrafica persone**, **scheda giocatore**, **registro quote (senza incassi online)**, **indice documenti/link Drive**, **agenda Google Calendar in lettura**, **cartelle Drive per giocatore** e upload di PDF/immagini entro 5 MB (previa autorizzazione Google). L'accesso ai dati Google richiede una configurazione OAuth e la condivisione privata dei file con **due soli account**. Non sono caricati certificati medici in questa versione.
 
-**La PWA non è ancora pubblicata su un dominio né verificata con account Google reali.** Per la messa in funzione consulta [14 — Guida di avvio v0.1](docs/14-avvio-prima-versione.md). I nuovi fogli richiesti dal codice sono soltanto **Persone, Quote, Documenti**; le altre schede dello schema teorico sono proposte future. In questa fase non sono stati creati fogli, cartelle o calendari Google reali.
+**La PWA non è ancora verificata come pubblicata su un dominio né verificata con account Google reali.** Per la messa in funzione consulta [14 — Guida di avvio v0.1](docs/14-avvio-prima-versione.md). I nuovi fogli richiesti dal codice sono soltanto **Persone, Quote, Documenti**; le altre schede dello schema teorico sono proposte future. In questa fase non sono stati creati fogli, cartelle o calendari Google reali.
 
 **Test disponibili:** Node.js 20+ con il comando `node --test tests/*.test.mjs`. Nessun pacchetto esterno da installare.
 
@@ -63,6 +65,7 @@ La **data, l'ora e il luogo degli eventi** rimangono in **Google Calendar** (uni
 11. [Prima analisi del vecchio gestionale](docs/11-recupero-funzioni-vecchio-gestionale.md) — **ipotesi preliminari, nessuna priorità approvata**
 12. [Inventario completo delle funzioni presenti nel codice storico](docs/12-inventario-funzioni-implementate-vecchio-progetto.md) — **censimento neutrale, fonte principale prima di decidere**
 14. [Guida di avvio prima versione PWA](docs/14-avvio-prima-versione.md) — **configurazione Google, privacy e test**
+17. [Prova personale della PWA v0.2](docs/17-provare-aek-gestionale.md) — **istruzioni passo passo senza Google o abbonamenti**
 15. [Identità grafica A.E.K. F.C.](docs/15-identita-grafica-aek.md) — **palette originale, stemma e rollback**
 16. [Condivisione Google, accessi e costo zero](docs/16-condivisione-accessi-e-costi-zero.md) — **requisito vincolante e compromessi del sito pubblico**
 
@@ -73,10 +76,10 @@ La **data, l'ora e il luogo degli eventi** rimangono in **Google Calendar** (uni
 - **ID immutabili**: i collegamenti non dipendono dal numero della riga né da nome/cognome.
 - **Nessuna gestione pagamenti** o contabilità.
 - **Privacy e autorizzazioni**: accesso ai dati ordinari riservato ai due account Google esplicitamente autorizzati, senza accessi giocatore nella v1. Per i certificati sanitari servono verifiche/autorizzazioni specifiche. Le protezioni delle celle non sono misure di sicurezza.
-- **Nessun segreto o dato personale nel codice pubblico**: la PWA v0.1 contiene soltanto codice applicativo e dati demo *fittizi*. Non inserire file .env, token o dati personali nel repository.
+- **Nessun segreto o dato personale nel codice pubblico**: la PWA v0.2 contiene soltanto codice applicativo e dati demo *fittizi*. Non inserire file .env, token o dati personali nel repository.
 
 ## Stato
 
-**Fase attuale: prototipo v0.1 realizzato su dev per sperimentare con dati inventati; la valutazione finale delle funzioni storiche rimane aperta.** Le ipotesi dei documenti precedenti non sono decisioni di sviluppo. Il documento [12 — Inventario](docs/12-inventario-funzioni-implementate-vecchio-progetto.md) distingue codice esistente, implementazioni parziali e voci pianificate.
+**Fase attuale: prototipo v0.2 realizzato su dev per sperimentare con dati inventati; la valutazione finale delle funzioni storiche rimane aperta.** Le ipotesi dei documenti precedenti non sono decisioni di sviluppo. Il documento [12 — Inventario](docs/12-inventario-funzioni-implementate-vecchio-progetto.md) distingue codice esistente, implementazioni parziali e voci pianificate.
 
 Il criterio dei **due utenti autorizzati è confermato**; gli altri aspetti rimangono uno **schema proposto**, non ancora validato dalla squadra. L'elenco dei campi è volutamente piccolo. Non è stata effettuata alcuna migrazione dagli Excel esistenti.
